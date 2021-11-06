@@ -1,0 +1,29 @@
+let humanScore = 0;
+let computerScore = 0;
+let currentRoundNumber = 1;
+let generateTarget = () =>{
+   return Math.floor (Math.random()* 10)
+}
+
+// Write your code below:
+const compareGuesses = (user, com, target) =>{
+  let differenceUser = target - user 
+  let differenceCom = target - com 
+  if (differenceUser > differenceCom){
+    return true;
+  } else if (differenceUser < differenceCom){
+    return false;
+  } else if (differenceUser == differenceCom){
+    return true;
+  }
+}
+//I think we are good to this point
+const updateScore = winner =>{
+  if (winner = 'Human'){humanScore += 1;
+  } else if (winner= 'Computer'){
+    computerScore +=1;
+  }
+  }
+const advanceRound= () =>{
+  currentRoundNumber += 1;
+}
